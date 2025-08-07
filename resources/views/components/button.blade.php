@@ -1,5 +1,6 @@
-@props(['type', 'color'])
+@props(['color'])
 
-<button type="{{$type}}" style="padding: 4px; bg-color: green; color {{ $color }};">{{ $slot }}
-    
+
+<button style="background-color: {{ $color }}; color: white; padding: 8px 16px; border-radius: 6px;">
+    {{ $slot }}
 </button>
