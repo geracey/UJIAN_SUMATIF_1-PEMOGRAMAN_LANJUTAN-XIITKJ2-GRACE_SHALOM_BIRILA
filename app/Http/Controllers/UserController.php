@@ -90,15 +90,9 @@ public function show($id)
         'deskripsi' => 'Saya senang membuat desain yang estetik dan fungsional.'
     ]
 ];
-
-    // Cari student dengan ID cocok
     $student = collect($students)->first(function ($item) use ($id) {
         return $item['id'] == $id;
     });
-
-    if (!$student) {
-        abort(404, 'Siswa tidak ditemukan');
-    }
 
     return view('students.show', compact('student'));
 }
